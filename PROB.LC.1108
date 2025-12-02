@@ -2,3 +2,5 @@ class Solution:
     def defangIPaddr(self, address: str) -> str:
         result=address.replace(".","[.]")
         return result
+
+visit --> https://leetcode.com/problems/defanging-an-ip-address
