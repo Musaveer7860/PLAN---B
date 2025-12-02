@@ -1,0 +1,17 @@
+class Solution:
+    def numberOfLines(self, widths: List[int], s: str) -> List[int]:
+        lines = 1
+        currwidth = 0
+        for ch in s:
+            index = ord(ch) - ord("a")
+            w = widths[index]
+            if currwidth + w > 100:
+                lines += 1
+                currwidth = w
+            else:
+                currwidth+=w
+        
+        result = [lines,currwidth]
+        return result
+
+    visit --> https://leetcode.com/problems/number-of-lines-to-write-string?envType=problem-list-v2&envId=string
