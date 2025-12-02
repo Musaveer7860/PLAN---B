@@ -1,0 +1,9 @@
+class Solution:
+    def restoreString(self, s: str, indices: List[int]) -> str:
+        empty=[""]*len(s)
+        for i,w in enumerate(s):
+          index = indices[i]
+          empty[index] = w
+        return "".join(empty)
+                
+visit --> https://leetcode.com/problems/shuffle-string?envType=problem-list-v2&envId=string
