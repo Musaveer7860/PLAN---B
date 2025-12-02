@@ -1,0 +1,10 @@
+class Solution:
+    def arrayStringsAreEqual(self, word1: List[str], word2: List[str]) -> bool:
+            p = "".join(word1)
+            m = "".join(word2)
+            if p == m:
+                return True
+            else:
+                return False
+
+visit --> https://leetcode.com/problems/check-if-two-string-arrays-are-equivalent?envType=problem-list-v2&envId=string
