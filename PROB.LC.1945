@@ -1,0 +1,22 @@
+class Solution:
+    def getLucky(self, s: str, k: int) -> int:
+        result = ""
+        
+        for ch in s:
+            index = (ord(ch) - ord("a")) + 1
+            result = str(index) + result
+
+        p = int(result)
+
+        while k > 0:
+            sum1 = 0
+            while p > 0:
+                rem = p % 10
+                sum1 += rem
+                p //= 10
+
+            p = sum1     
+            k -= 1
+
+        return p
+visit --> https://leetcode.com/problems/sum-of-digits-of-string-after-convert?envType=problem-list-v2&envId=string
